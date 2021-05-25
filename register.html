@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <style>  
+        body  
+        {  
+        background-image:url("https://www.everbridge.com/wp-content/uploads/covid-vaccine-registration.jpg");  
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%; 
+        }      
+    </style>  
+    <body>
+        <center>
+            <h1 style="background-color :antiquewhite;">
+            <p style="font-size:50px">Online Registration
+            </h1>
+            <br/>
+            <form action="register.php" method = "POST" >
+                <p style="font-size:30px">
+                Enter your name: <input type="text" name="name"  minlength="5" maxlength="15" />
+                <br/>
+                Enter address: <input type="text" name="address" />
+                <br/>
+                Enter contact number: <input type="tel" name="contact"  pattern="^\d{10}$" />
+                <br/><br/>
+                <input type="submit" value="submit" name = "submit1"/><br/>
+                <a href="index.html">Click here to go back
+                </p>
+            </form>
+        </center> 
+        
+      
+    </body>
+</html>
