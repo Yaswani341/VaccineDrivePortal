@@ -1,5 +1,5 @@
     <?php
-    
+
         function console_log($output, $with_script_tags = true) {
             $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) . ');';
             if ($with_script_tags) {
@@ -14,8 +14,9 @@
             $name = ($_POST['name']);
             $address = ($_POST['address']);
             $contact = ($_POST['contact']);
-            
-            $sql = "INSERT INTO user_details(name, address, contact) values('$name', '$address', '$contact')";
+            $dose1 = 'NO';
+            $dose2 = 'NO';
+            $sql = "INSERT INTO user_details(name, address, contact, dose1, dose2) values('$name', '$address', '$contact','$dose1' ,'$dose2')";
             if ($link->query($sql)) {
                 echo "New record created successfully <br>";
               } else {
