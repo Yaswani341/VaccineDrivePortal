@@ -32,6 +32,7 @@
                 $result = $link->query($sql);
                 echo "<table border='1'>
                 <tr>
+                <th>Aadhar</th>
                 <th>Name</th>
                 <th>Address</th>
                 <th>Mobile</th>
@@ -41,10 +42,11 @@
                 while($row = mysqli_fetch_array($result))
                 {
                         echo "<tr>";
+                        echo "<td>" . $row['aadhar'] . "</td>";
                         echo "<td>" . $row['name'] . "</td>";
                         echo "<td>" . $row['address'] . "</td>";
                         echo "<td>" . $row['contact'] . "</td>";
-                        echo "<td>" . $row['dos1'] . "</td>";
+                        echo "<td>" . $row['dose1'] . "</td>";
                         echo "<td>" . $row['dose2'] . "</td>";
                         echo "</tr>";
                 }

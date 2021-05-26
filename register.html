@@ -19,11 +19,13 @@
             <br/>
             <form action="register.php" method = "POST" >
                 <p style="font-size:30px">
-                Enter your name: <input type="text" name="name"  minlength="5" maxlength="15" />
+                Enter your Aadhar number: <input type="text" name="aadhar"  minlength="12" maxlength="12" required = "required" />
                 <br/>
-                Enter address: <input type="text" name="address" />
+                Enter your name: <input type="text" name="name"  minlength="5" maxlength="15" required = "required"/>
                 <br/>
-                Enter contact number: <input type="tel" name="contact"  pattern="^\d{10}$" />
+                Enter address: <input type="text" name="address" required = "required"/>
+                <br/>
+                Enter contact number: <input type="tel" name="contact"  pattern="^\d{10}$" required = "required"/>
                 <br/><br/>
                 <input type="submit" value="submit" name = "submit1"/><br/>
                 <a href="index.html">Click here to go back
