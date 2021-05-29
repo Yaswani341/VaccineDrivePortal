@@ -51,30 +51,17 @@
                         <td>    <input type="radio" name="dose1" value="yes">Yes 
                                 <input type="radio" name="dose1"  value="no">No 
                         </td>
-                        <?php 
-                                if ($row['dose1']=="yes") 
-                                        echo "checked";
-                                if ($row['dose1']=="no") 
-                                        echo "checked";
-                                
-                        ?>
                         <td>    <input type="radio" name="dose2" value="yes">Yes 
                                 <input type="radio" name="dose2"  value="no">No 
                         </td>
-                        <?php 
-                                if ($row['dose2']=="yes") 
-                                        echo "checked";
-                                if ($row['dose2']=="no") 
-                                        echo "checked";
-                        ?>
                 
-                </form>
         <?php
                         echo "</tr>";
                 }
                 echo "</table>";
         ?>
                 <br><input type="submit" value="Update" name="update"/><br><br>
+                </form>
         <?php
                 $link->close();
         ?>
