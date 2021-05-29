@@ -24,29 +24,32 @@
         {
             $ID = ($_POST['ID']);
             $password = ($_POST['password']);
-        }
-        $sql = "SELECT * FROM doctor_details";
-        $result = $link->query($sql);
-        while($row = mysqli_fetch_array($result))
-        {
-            if($ID == $row['ID'])
+            console_log("$ID");
+            $sql = "SELECT * FROM doctor_details";
+            $result = $link->query($sql);
+            console_log("linked");
+            while($row = mysqli_fetch_array($result))
             {
-                console_log("$ID");
-                if($password == $row['password'])
-               {
-                    console_log("$password");
-                    header("Location:edit.php");
-               }
-               else
-               {
-                    echo "Incorrect password";
-               }
-            }  
-            else
-            {
-                echo "Not exits";
+                console_log("checking entries");
+                if($ID == $row['ID'])
+                {
+                    console_log("id exist");
+                    if($password == $row['password'])
+                    {
+                        console_log("user exits");
+                        header("Location:edit.php");
+                    }
+                    else
+                    {
+                        console_log("wrong pass");
+                        echo "Incorrect password";
+                    }
+                }  
+                else
+                {
+                    echo "Not exits";
+                }
             }
-
         }
         
     ?>

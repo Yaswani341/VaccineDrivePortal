@@ -63,7 +63,7 @@
                 <br><input type="submit" value="Update" name="update"/><br><br>
                 </form>
         <?php
-                $link->close();
+                //$link->close();
         ?>
         <a href="index.html">Click here to go back
 </center>
