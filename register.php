@@ -1,15 +1,7 @@
     <?php
-
-        function console_log($output, $with_script_tags = true) {
-            $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) . ');';
-            if ($with_script_tags) {
-                $js_code = '<script>' . $js_code . '</script>';
-            }
-        echo $js_code;
-        }
-        console_log('hi');
-    
+        include "console.php";    
         if (isset($_POST['submit1'])) {
+            console_log("submitted");
             include 'connect.php';
             $aadhar = ($_POST['aadhar']);
             $name = ($_POST['name']);
@@ -24,6 +16,5 @@
                 echo "Error: " . $sql . "<br>" . $link->error;
               }
         }
-        
         echo "Success";
     ?>      
