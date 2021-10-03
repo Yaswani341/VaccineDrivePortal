@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var router = express.Router();
 const ejs = require('ejs');
 app.set('view engine', 'ejs');
+var bodyParser = require('body-parser');
 
 const connectDB = require('./connection');
 connectDB();
